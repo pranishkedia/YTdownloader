@@ -9,3 +9,9 @@ yt = YouTube(link)
 print("Title: ", yt.title)
 
 print("View", yt.views)
+
+# Downloads the highest version of video
+downloader = yt.streams.get_highest_resolution()
+
+# Video is downloaded to this folder
+downloader.download("/Users/pk/Documents/Youtube Downloads")
